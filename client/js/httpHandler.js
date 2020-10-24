@@ -5,6 +5,22 @@
   //
   // TODO: build the swim command fetcher here
   //
+  const httpCommands = () => {
+    $.ajax({
+      type: 'GET',
+      data: {},
+      url: serverUrl,
+      success: (res) => {
+        SwimTeam.move(res)
+      },
+      error: () => console.log('Error')
+    });
+  };
+
+
+  // UNCOMMENT FOR RANDOM DIRECTIONS
+  // setInterval(function(){httpCommands();}, 5000); <-----
+  httpCommands();
 
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
@@ -17,7 +33,7 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl,
       cache: false,
       contentType: false,
       processData: false,
