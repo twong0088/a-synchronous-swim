@@ -17,6 +17,7 @@
     });
   };
 
+
   // UNCOMMENT FOR RANDOM DIRECTIONS
   // setInterval(httpCommands, 1000);
 
