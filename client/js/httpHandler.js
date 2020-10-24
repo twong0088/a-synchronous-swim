@@ -4,7 +4,7 @@
 
   //
   // TODO: build the swim command fetcher here
-  //
+
   const httpCommands = () => {
     $.ajax({
       type: 'GET',
@@ -17,10 +17,8 @@
     });
   };
 
-
   // UNCOMMENT FOR RANDOM DIRECTIONS
-  // setInterval(function(){httpCommands();}, 5000); <-----
-  httpCommands();
+  // setInterval(httpCommands, 1000);
 
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
